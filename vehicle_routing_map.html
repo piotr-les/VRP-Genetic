@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_268ff0833dbd9e90439a627a8abdf3ec {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_268ff0833dbd9e90439a627a8abdf3ec" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_268ff0833dbd9e90439a627a8abdf3ec = L.map(
+                "map_268ff0833dbd9e90439a627a8abdf3ec",
+                {
+                    center: [50.0647, 19.945],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4b3fd9fcea46788d359ba5fd2363ff97 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_4b3fd9fcea46788d359ba5fd2363ff97.addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var marker_26c59adb24f82ca9bab9e2c7ff271d54 = L.marker(
+                [50.0647, 19.945],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_0bb22c54f4c25e7ac59e95a2a1ce9f41 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_26c59adb24f82ca9bab9e2c7ff271d54.setIcon(icon_0bb22c54f4c25e7ac59e95a2a1ce9f41);
+        
+    
+        var popup_87387099370209a41b10eb41dbbe61f8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d99c1e2523e07073dfbd441099a94530 = $(`<div id="html_d99c1e2523e07073dfbd441099a94530" style="width: 100.0%; height: 100.0%;">Kraków - Punkt startowy</div>`)[0];
+                popup_87387099370209a41b10eb41dbbe61f8.setContent(html_d99c1e2523e07073dfbd441099a94530);
+            
+        
+
+        marker_26c59adb24f82ca9bab9e2c7ff271d54.bindPopup(popup_87387099370209a41b10eb41dbbe61f8)
+        ;
+
+        
+    
+    
+            var poly_line_ae977039306e1dea73f537d65e2aafe4 = L.polyline(
+                [[50.0647, 19.945], [51.4027, 21.1443], [53.1325, 23.1688], [51.418, 21.968], [50.8236, 15.5234], [51.1079, 17.0385], [50.0647, 19.945]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+        var popup_fe193a7d949f176ff68ef1bbb7e997ed = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cefc33713e5ca6ea371957fb46a6c73a = $(`<div id="html_cefc33713e5ca6ea371957fb46a6c73a" style="width: 100.0%; height: 100.0%;">Trasa pojazdu 1</div>`)[0];
+                popup_fe193a7d949f176ff68ef1bbb7e997ed.setContent(html_cefc33713e5ca6ea371957fb46a6c73a);
+            
+        
+
+        poly_line_ae977039306e1dea73f537d65e2aafe4.bindPopup(popup_fe193a7d949f176ff68ef1bbb7e997ed)
+        ;
+
+        
+    
+    
+            var marker_210b0bea0240840b1444c643fb3baea7 = L.marker(
+                [51.4027, 21.1443],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_6e0e4bfa0eca5c230f43ba64bf122d83 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_210b0bea0240840b1444c643fb3baea7.setIcon(icon_6e0e4bfa0eca5c230f43ba64bf122d83);
+        
+    
+        var popup_9c2d933d21aa5a4f58ac4ddbf82031c8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b1f05afe9ef947fc0b30d9a6fc43c7a6 = $(`<div id="html_b1f05afe9ef947fc0b30d9a6fc43c7a6" style="width: 100.0%; height: 100.0%;">Radom (Pojazd 1)</div>`)[0];
+                popup_9c2d933d21aa5a4f58ac4ddbf82031c8.setContent(html_b1f05afe9ef947fc0b30d9a6fc43c7a6);
+            
+        
+
+        marker_210b0bea0240840b1444c643fb3baea7.bindPopup(popup_9c2d933d21aa5a4f58ac4ddbf82031c8)
+        ;
+
+        
+    
+    
+            var marker_9ff4d795da7995dd700763dc73bd253c = L.marker(
+                [53.1325, 23.1688],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_5e946f32cf5405d545e369b3040dcd7c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9ff4d795da7995dd700763dc73bd253c.setIcon(icon_5e946f32cf5405d545e369b3040dcd7c);
+        
+    
+        var popup_b9261dc2628d590a4a1b10a6cf2b75dd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b3906d8677d59122fc8f95da6efc59be = $(`<div id="html_b3906d8677d59122fc8f95da6efc59be" style="width: 100.0%; height: 100.0%;">Białystok (Pojazd 1)</div>`)[0];
+                popup_b9261dc2628d590a4a1b10a6cf2b75dd.setContent(html_b3906d8677d59122fc8f95da6efc59be);
+            
+        
+
+        marker_9ff4d795da7995dd700763dc73bd253c.bindPopup(popup_b9261dc2628d590a4a1b10a6cf2b75dd)
+        ;
+
+        
+    
+    
+            var marker_4c40d1dd8b585ac82f930dfddbcdd39d = L.marker(
+                [51.418, 21.968],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_24b682d6f3ba394e4dc4420ee00e3adf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4c40d1dd8b585ac82f930dfddbcdd39d.setIcon(icon_24b682d6f3ba394e4dc4420ee00e3adf);
+        
+    
+        var popup_d57ee6f43022e3c834271c30889e3d6c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4c8065a08621f93a8ed48600ecfb8310 = $(`<div id="html_4c8065a08621f93a8ed48600ecfb8310" style="width: 100.0%; height: 100.0%;">Puławy (Pojazd 1)</div>`)[0];
+                popup_d57ee6f43022e3c834271c30889e3d6c.setContent(html_4c8065a08621f93a8ed48600ecfb8310);
+            
+        
+
+        marker_4c40d1dd8b585ac82f930dfddbcdd39d.bindPopup(popup_d57ee6f43022e3c834271c30889e3d6c)
+        ;
+
+        
+    
+    
+            var marker_bc11bffdf9f511bd1b7f399775a74f1e = L.marker(
+                [50.8236, 15.5234],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_0873da71314496fc2d3c6fd8482c55b2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bc11bffdf9f511bd1b7f399775a74f1e.setIcon(icon_0873da71314496fc2d3c6fd8482c55b2);
+        
+    
+        var popup_9168bf8e19fcffaa3655c9fb60d9cb63 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_69407422e37bac6433658c699708d96a = $(`<div id="html_69407422e37bac6433658c699708d96a" style="width: 100.0%; height: 100.0%;">Szklarska Poręba (Pojazd 1)</div>`)[0];
+                popup_9168bf8e19fcffaa3655c9fb60d9cb63.setContent(html_69407422e37bac6433658c699708d96a);
+            
+        
+
+        marker_bc11bffdf9f511bd1b7f399775a74f1e.bindPopup(popup_9168bf8e19fcffaa3655c9fb60d9cb63)
+        ;
+
+        
+    
+    
+            var marker_ec984aa3a306558a55383f1178ac0df6 = L.marker(
+                [51.1079, 17.0385],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_1ac7b69f6ae1a9475d7c3e70a260a362 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ec984aa3a306558a55383f1178ac0df6.setIcon(icon_1ac7b69f6ae1a9475d7c3e70a260a362);
+        
+    
+        var popup_e381cbdb809fb78db7465598e40819f0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_20e4c71525ccfa1b4e2c97960e9f328e = $(`<div id="html_20e4c71525ccfa1b4e2c97960e9f328e" style="width: 100.0%; height: 100.0%;">Wrocław (Pojazd 1)</div>`)[0];
+                popup_e381cbdb809fb78db7465598e40819f0.setContent(html_20e4c71525ccfa1b4e2c97960e9f328e);
+            
+        
+
+        marker_ec984aa3a306558a55383f1178ac0df6.bindPopup(popup_e381cbdb809fb78db7465598e40819f0)
+        ;
+
+        
+    
+    
+            var poly_line_de6ec6b99270b82e23633fc2212ffe3c = L.polyline(
+                [[50.0647, 19.945], [54.352, 18.6466], [50.7222, 23.2622], [52.2297, 21.0122], [50.0124, 20.9886], [49.4325, 21.5747], [50.0647, 19.945]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+        var popup_49d2a0c50ad49f4f65e5a23ef1595a0b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e341c8daaf91bceb4f2cddcd6796854c = $(`<div id="html_e341c8daaf91bceb4f2cddcd6796854c" style="width: 100.0%; height: 100.0%;">Trasa pojazdu 2</div>`)[0];
+                popup_49d2a0c50ad49f4f65e5a23ef1595a0b.setContent(html_e341c8daaf91bceb4f2cddcd6796854c);
+            
+        
+
+        poly_line_de6ec6b99270b82e23633fc2212ffe3c.bindPopup(popup_49d2a0c50ad49f4f65e5a23ef1595a0b)
+        ;
+
+        
+    
+    
+            var marker_e3f05d7fbd8c2b183fdf462aec9efe55 = L.marker(
+                [54.352, 18.6466],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_ea21ab8a750a5f5149d19c4d06b74d71 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e3f05d7fbd8c2b183fdf462aec9efe55.setIcon(icon_ea21ab8a750a5f5149d19c4d06b74d71);
+        
+    
+        var popup_16950d7e25d3ff0e5d330b741525a32d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4662100989590cd5c3ee53dc5a2c7aed = $(`<div id="html_4662100989590cd5c3ee53dc5a2c7aed" style="width: 100.0%; height: 100.0%;">Gdańsk (Pojazd 2)</div>`)[0];
+                popup_16950d7e25d3ff0e5d330b741525a32d.setContent(html_4662100989590cd5c3ee53dc5a2c7aed);
+            
+        
+
+        marker_e3f05d7fbd8c2b183fdf462aec9efe55.bindPopup(popup_16950d7e25d3ff0e5d330b741525a32d)
+        ;
+
+        
+    
+    
+            var marker_3f58727cdac4a8f26bfe6feb54fa5eab = L.marker(
+                [50.7222, 23.2622],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_543d0ed654e4406a018485a66bb1ac84 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3f58727cdac4a8f26bfe6feb54fa5eab.setIcon(icon_543d0ed654e4406a018485a66bb1ac84);
+        
+    
+        var popup_965258ef7684f5f626fa6cfcc098f1dd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cdfbfa2dd32cb051e533eaf3d10b3b1e = $(`<div id="html_cdfbfa2dd32cb051e533eaf3d10b3b1e" style="width: 100.0%; height: 100.0%;">Zamość (Pojazd 2)</div>`)[0];
+                popup_965258ef7684f5f626fa6cfcc098f1dd.setContent(html_cdfbfa2dd32cb051e533eaf3d10b3b1e);
+            
+        
+
+        marker_3f58727cdac4a8f26bfe6feb54fa5eab.bindPopup(popup_965258ef7684f5f626fa6cfcc098f1dd)
+        ;
+
+        
+    
+    
+            var marker_aaebd8885a9b6c38b73e3943c11b99d5 = L.marker(
+                [52.2297, 21.0122],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_f71568676c989803c6bf61f32ec0117f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_aaebd8885a9b6c38b73e3943c11b99d5.setIcon(icon_f71568676c989803c6bf61f32ec0117f);
+        
+    
+        var popup_11d366efbeaa89998bd25e4b802e90d8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4fd26d346ca478a9ec31bb12c0a366c8 = $(`<div id="html_4fd26d346ca478a9ec31bb12c0a366c8" style="width: 100.0%; height: 100.0%;">Warszawa (Pojazd 2)</div>`)[0];
+                popup_11d366efbeaa89998bd25e4b802e90d8.setContent(html_4fd26d346ca478a9ec31bb12c0a366c8);
+            
+        
+
+        marker_aaebd8885a9b6c38b73e3943c11b99d5.bindPopup(popup_11d366efbeaa89998bd25e4b802e90d8)
+        ;
+
+        
+    
+    
+            var marker_8d777201798bc2a24c072c6ede626fe4 = L.marker(
+                [50.0124, 20.9886],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_2e18ff19648a12154b84830fbfd5d176 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8d777201798bc2a24c072c6ede626fe4.setIcon(icon_2e18ff19648a12154b84830fbfd5d176);
+        
+    
+        var popup_e0e7e7ebcb28cdb960c24fb64611913b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_46957a7f1b5fa0e8ca29cab021213ab9 = $(`<div id="html_46957a7f1b5fa0e8ca29cab021213ab9" style="width: 100.0%; height: 100.0%;">Tarnów (Pojazd 2)</div>`)[0];
+                popup_e0e7e7ebcb28cdb960c24fb64611913b.setContent(html_46957a7f1b5fa0e8ca29cab021213ab9);
+            
+        
+
+        marker_8d777201798bc2a24c072c6ede626fe4.bindPopup(popup_e0e7e7ebcb28cdb960c24fb64611913b)
+        ;
+
+        
+    
+    
+            var marker_6179e9427f708cd635ffb176f1152cff = L.marker(
+                [49.4325, 21.5747],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_d57b314a8a6d5ed456d8d20f644413e7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6179e9427f708cd635ffb176f1152cff.setIcon(icon_d57b314a8a6d5ed456d8d20f644413e7);
+        
+    
+        var popup_02ae66e83dd63825c4406ba55f3578b9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e9d5eec2a62733dfc87300d0f2b1633f = $(`<div id="html_e9d5eec2a62733dfc87300d0f2b1633f" style="width: 100.0%; height: 100.0%;">Krynica (Pojazd 2)</div>`)[0];
+                popup_02ae66e83dd63825c4406ba55f3578b9.setContent(html_e9d5eec2a62733dfc87300d0f2b1633f);
+            
+        
+
+        marker_6179e9427f708cd635ffb176f1152cff.bindPopup(popup_02ae66e83dd63825c4406ba55f3578b9)
+        ;
+
+        
+    
+    
+            var poly_line_57fb59cd2f352f559c2d085f79989e22 = L.polyline(
+                [[50.0647, 19.945], [50.1363, 19.403], [49.7867, 20.9736], [49.489, 21.7597], [49.9854, 20.061], [50.2945, 18.6706], [50.0647, 19.945]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+        var popup_2e5461e9903594d0daf35d9b11f2e4b8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_05cde8023d2429128c7e423a779ecbcc = $(`<div id="html_05cde8023d2429128c7e423a779ecbcc" style="width: 100.0%; height: 100.0%;">Trasa pojazdu 3</div>`)[0];
+                popup_2e5461e9903594d0daf35d9b11f2e4b8.setContent(html_05cde8023d2429128c7e423a779ecbcc);
+            
+        
+
+        poly_line_57fb59cd2f352f559c2d085f79989e22.bindPopup(popup_2e5461e9903594d0daf35d9b11f2e4b8)
+        ;
+
+        
+    
+    
+            var marker_84818306653600138a4fb381f5f49a85 = L.marker(
+                [50.1363, 19.403],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_cd48126d00626971e5e8d93995fff512 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_84818306653600138a4fb381f5f49a85.setIcon(icon_cd48126d00626971e5e8d93995fff512);
+        
+    
+        var popup_f73ed6ec12ede352cf61f2fa19235797 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c20a9090ded57574e71cc2f157f3bc95 = $(`<div id="html_c20a9090ded57574e71cc2f157f3bc95" style="width: 100.0%; height: 100.0%;">Chrzanów (Pojazd 3)</div>`)[0];
+                popup_f73ed6ec12ede352cf61f2fa19235797.setContent(html_c20a9090ded57574e71cc2f157f3bc95);
+            
+        
+
+        marker_84818306653600138a4fb381f5f49a85.bindPopup(popup_f73ed6ec12ede352cf61f2fa19235797)
+        ;
+
+        
+    
+    
+            var marker_c7a13dcd2bbecd1f47c8f00c44868a98 = L.marker(
+                [49.7867, 20.9736],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_b9eccad128195ae2b4545eb4af65c377 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c7a13dcd2bbecd1f47c8f00c44868a98.setIcon(icon_b9eccad128195ae2b4545eb4af65c377);
+        
+    
+        var popup_ace12749cfe7e119aec4b95fe28252ff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_287bebda01dc3501b2267c727a966ebe = $(`<div id="html_287bebda01dc3501b2267c727a966ebe" style="width: 100.0%; height: 100.0%;">Gromnik (Pojazd 3)</div>`)[0];
+                popup_ace12749cfe7e119aec4b95fe28252ff.setContent(html_287bebda01dc3501b2267c727a966ebe);
+            
+        
+
+        marker_c7a13dcd2bbecd1f47c8f00c44868a98.bindPopup(popup_ace12749cfe7e119aec4b95fe28252ff)
+        ;
+
+        
+    
+    
+            var marker_a6bf4287cecaa6ebf2f6e869e5c31a4a = L.marker(
+                [49.489, 21.7597],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_96e3446be8d326d95ca3ab3b9b770965 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a6bf4287cecaa6ebf2f6e869e5c31a4a.setIcon(icon_96e3446be8d326d95ca3ab3b9b770965);
+        
+    
+        var popup_3ddc2ca4f6dfd4889b79bbeffa55af40 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_21882764a5c03a0f1f49053a0b23f82c = $(`<div id="html_21882764a5c03a0f1f49053a0b23f82c" style="width: 100.0%; height: 100.0%;">Krosno (Pojazd 3)</div>`)[0];
+                popup_3ddc2ca4f6dfd4889b79bbeffa55af40.setContent(html_21882764a5c03a0f1f49053a0b23f82c);
+            
+        
+
+        marker_a6bf4287cecaa6ebf2f6e869e5c31a4a.bindPopup(popup_3ddc2ca4f6dfd4889b79bbeffa55af40)
+        ;
+
+        
+    
+    
+            var marker_ba20645876affa402c8fab74786ff04d = L.marker(
+                [49.9854, 20.061],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_4b4e17ea5d87b2b1d0dbe8b651b66539 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ba20645876affa402c8fab74786ff04d.setIcon(icon_4b4e17ea5d87b2b1d0dbe8b651b66539);
+        
+    
+        var popup_6d2c3cf2f7b7cade373732a7e2685b7f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fed3f800d808344390999469bfb112ea = $(`<div id="html_fed3f800d808344390999469bfb112ea" style="width: 100.0%; height: 100.0%;">Wieliczka (Pojazd 3)</div>`)[0];
+                popup_6d2c3cf2f7b7cade373732a7e2685b7f.setContent(html_fed3f800d808344390999469bfb112ea);
+            
+        
+
+        marker_ba20645876affa402c8fab74786ff04d.bindPopup(popup_6d2c3cf2f7b7cade373732a7e2685b7f)
+        ;
+
+        
+    
+    
+            var marker_9ba8a4e365402cfbafb36e749ffe1638 = L.marker(
+                [50.2945, 18.6706],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_d2a356e94be857fbc459e5782c3dd3f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_9ba8a4e365402cfbafb36e749ffe1638.setIcon(icon_d2a356e94be857fbc459e5782c3dd3f0);
+        
+    
+        var popup_2beae1470e63761f130eb5d8b5a906c3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ab46408b88a7aa8502d2e1e55beb181f = $(`<div id="html_ab46408b88a7aa8502d2e1e55beb181f" style="width: 100.0%; height: 100.0%;">Gliwice (Pojazd 3)</div>`)[0];
+                popup_2beae1470e63761f130eb5d8b5a906c3.setContent(html_ab46408b88a7aa8502d2e1e55beb181f);
+            
+        
+
+        marker_9ba8a4e365402cfbafb36e749ffe1638.bindPopup(popup_2beae1470e63761f130eb5d8b5a906c3)
+        ;
+
+        
+    
+    
+            var poly_line_c85fd9759822b27b23c7a8d1fd4aa311 = L.polyline(
+                [[50.0647, 19.945], [54.0344, 19.0569], [51.7592, 19.456], [49.8225, 19.0638], [50.2649, 19.0238], [49.4745, 20.0292], [49.2992, 19.9497], [50.2904, 20.9422], [50.0647, 19.945]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+        var popup_05206e615f76dea476f38bf4c5f3e8ba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5266008f0b1626f7f8bf54173bde1095 = $(`<div id="html_5266008f0b1626f7f8bf54173bde1095" style="width: 100.0%; height: 100.0%;">Trasa pojazdu 4</div>`)[0];
+                popup_05206e615f76dea476f38bf4c5f3e8ba.setContent(html_5266008f0b1626f7f8bf54173bde1095);
+            
+        
+
+        poly_line_c85fd9759822b27b23c7a8d1fd4aa311.bindPopup(popup_05206e615f76dea476f38bf4c5f3e8ba)
+        ;
+
+        
+    
+    
+            var marker_da0ccdf1734a299e91f6ed12811c8a9e = L.marker(
+                [54.0344, 19.0569],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_720ab5dd46998a18df938142151768c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_da0ccdf1734a299e91f6ed12811c8a9e.setIcon(icon_720ab5dd46998a18df938142151768c3);
+        
+    
+        var popup_9c8d870a71a45faeb50e2ae1e2cca2b0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b96952cc16aa2630aa4cdf18bb8caebb = $(`<div id="html_b96952cc16aa2630aa4cdf18bb8caebb" style="width: 100.0%; height: 100.0%;">Malbork (Pojazd 4)</div>`)[0];
+                popup_9c8d870a71a45faeb50e2ae1e2cca2b0.setContent(html_b96952cc16aa2630aa4cdf18bb8caebb);
+            
+        
+
+        marker_da0ccdf1734a299e91f6ed12811c8a9e.bindPopup(popup_9c8d870a71a45faeb50e2ae1e2cca2b0)
+        ;
+
+        
+    
+    
+            var marker_efb0497fc8eac17fca854c25ce4348d0 = L.marker(
+                [51.7592, 19.456],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_50975cf3ce1cd85acdf049088d9e1bb7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_efb0497fc8eac17fca854c25ce4348d0.setIcon(icon_50975cf3ce1cd85acdf049088d9e1bb7);
+        
+    
+        var popup_33179cbbdaa3cd609a79ac152e80d86e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_89a28cf938d6c7c6f422d0e799530e19 = $(`<div id="html_89a28cf938d6c7c6f422d0e799530e19" style="width: 100.0%; height: 100.0%;">Łódź (Pojazd 4)</div>`)[0];
+                popup_33179cbbdaa3cd609a79ac152e80d86e.setContent(html_89a28cf938d6c7c6f422d0e799530e19);
+            
+        
+
+        marker_efb0497fc8eac17fca854c25ce4348d0.bindPopup(popup_33179cbbdaa3cd609a79ac152e80d86e)
+        ;
+
+        
+    
+    
+            var marker_312e111e57bde1977bd4818345b4af58 = L.marker(
+                [49.8225, 19.0638],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_19f29f2931b508ea39074d755b5394de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_312e111e57bde1977bd4818345b4af58.setIcon(icon_19f29f2931b508ea39074d755b5394de);
+        
+    
+        var popup_5eba8acf6980af4d114dce00ed887d58 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eb2c88a107b07cb295970299d43c3a24 = $(`<div id="html_eb2c88a107b07cb295970299d43c3a24" style="width: 100.0%; height: 100.0%;">Bielsko-Biała (Pojazd 4)</div>`)[0];
+                popup_5eba8acf6980af4d114dce00ed887d58.setContent(html_eb2c88a107b07cb295970299d43c3a24);
+            
+        
+
+        marker_312e111e57bde1977bd4818345b4af58.bindPopup(popup_5eba8acf6980af4d114dce00ed887d58)
+        ;
+
+        
+    
+    
+            var marker_c29ab1a2d2906d6631a7b51375926ca4 = L.marker(
+                [50.2649, 19.0238],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_201c663052602cfa60ae1ce504dd55f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_c29ab1a2d2906d6631a7b51375926ca4.setIcon(icon_201c663052602cfa60ae1ce504dd55f4);
+        
+    
+        var popup_d80b66b815036672debdea3d81e18de0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cc5162ef7b2e9893412717976b20158e = $(`<div id="html_cc5162ef7b2e9893412717976b20158e" style="width: 100.0%; height: 100.0%;">Katowice (Pojazd 4)</div>`)[0];
+                popup_d80b66b815036672debdea3d81e18de0.setContent(html_cc5162ef7b2e9893412717976b20158e);
+            
+        
+
+        marker_c29ab1a2d2906d6631a7b51375926ca4.bindPopup(popup_d80b66b815036672debdea3d81e18de0)
+        ;
+
+        
+    
+    
+            var marker_0334768c83c182274b2f44521ed27f95 = L.marker(
+                [49.4745, 20.0292],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_5978191b74dd0120f31f7059cd7d67ba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_0334768c83c182274b2f44521ed27f95.setIcon(icon_5978191b74dd0120f31f7059cd7d67ba);
+        
+    
+        var popup_a7fb93be33db97590211af6c95a4c8ba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f21c3ed7c86eab3b38f10d841f49f306 = $(`<div id="html_f21c3ed7c86eab3b38f10d841f49f306" style="width: 100.0%; height: 100.0%;">Nowy Targ (Pojazd 4)</div>`)[0];
+                popup_a7fb93be33db97590211af6c95a4c8ba.setContent(html_f21c3ed7c86eab3b38f10d841f49f306);
+            
+        
+
+        marker_0334768c83c182274b2f44521ed27f95.bindPopup(popup_a7fb93be33db97590211af6c95a4c8ba)
+        ;
+
+        
+    
+    
+            var marker_a174ef4ad292c449d36867fb1b2dbda3 = L.marker(
+                [49.2992, 19.9497],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_f1a6b2b5463d324f02ffb4c7ba5bb140 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_a174ef4ad292c449d36867fb1b2dbda3.setIcon(icon_f1a6b2b5463d324f02ffb4c7ba5bb140);
+        
+    
+        var popup_ba6ce069ad929c0ca019cf46386867e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_198a8dd9135427c83cac2135643f071e = $(`<div id="html_198a8dd9135427c83cac2135643f071e" style="width: 100.0%; height: 100.0%;">Zakopane (Pojazd 4)</div>`)[0];
+                popup_ba6ce069ad929c0ca019cf46386867e2.setContent(html_198a8dd9135427c83cac2135643f071e);
+            
+        
+
+        marker_a174ef4ad292c449d36867fb1b2dbda3.bindPopup(popup_ba6ce069ad929c0ca019cf46386867e2)
+        ;
+
+        
+    
+    
+            var marker_695b9f68cc8e55f53a8265017b5a93d7 = L.marker(
+                [50.2904, 20.9422],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_89faac7467a2107c2566b8025a3aec92 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_695b9f68cc8e55f53a8265017b5a93d7.setIcon(icon_89faac7467a2107c2566b8025a3aec92);
+        
+    
+        var popup_40f32fdf4b5489968d18675802665c70 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b271eda04f7348edc55cf505de6e01b2 = $(`<div id="html_b271eda04f7348edc55cf505de6e01b2" style="width: 100.0%; height: 100.0%;">Szczucin (Pojazd 4)</div>`)[0];
+                popup_40f32fdf4b5489968d18675802665c70.setContent(html_b271eda04f7348edc55cf505de6e01b2);
+            
+        
+
+        marker_695b9f68cc8e55f53a8265017b5a93d7.bindPopup(popup_40f32fdf4b5489968d18675802665c70)
+        ;
+
+        
+    
+    
+            var poly_line_0a7ff16242b500b2f838719920fd1ab1 = L.polyline(
+                [[50.0647, 19.945], [51.2465, 22.5684], [52.4064, 16.9292], [54.5189, 18.5305], [53.4285, 14.5528], [53.778, 20.4801], [50.6764, 21.7456], [50.0412, 21.9991], [50.8661, 20.6281], [50.0647, 19.945]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+        var popup_9cf3f76f86f6a36110ac32b114dbb405 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1666729acf1c66c69b6d5b3d7c2da8ba = $(`<div id="html_1666729acf1c66c69b6d5b3d7c2da8ba" style="width: 100.0%; height: 100.0%;">Trasa pojazdu 5</div>`)[0];
+                popup_9cf3f76f86f6a36110ac32b114dbb405.setContent(html_1666729acf1c66c69b6d5b3d7c2da8ba);
+            
+        
+
+        poly_line_0a7ff16242b500b2f838719920fd1ab1.bindPopup(popup_9cf3f76f86f6a36110ac32b114dbb405)
+        ;
+
+        
+    
+    
+            var marker_475d7c97cb034d12a6660ba206ad463e = L.marker(
+                [51.2465, 22.5684],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_842087c7e712ec5b72abc4bf2fc00903 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_475d7c97cb034d12a6660ba206ad463e.setIcon(icon_842087c7e712ec5b72abc4bf2fc00903);
+        
+    
+        var popup_85b0d356ef4c2d2a0e29b0dc9a32bb2a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0104c64b3cde1e1acb7dd1caa3fcba8a = $(`<div id="html_0104c64b3cde1e1acb7dd1caa3fcba8a" style="width: 100.0%; height: 100.0%;">Lublin (Pojazd 5)</div>`)[0];
+                popup_85b0d356ef4c2d2a0e29b0dc9a32bb2a.setContent(html_0104c64b3cde1e1acb7dd1caa3fcba8a);
+            
+        
+
+        marker_475d7c97cb034d12a6660ba206ad463e.bindPopup(popup_85b0d356ef4c2d2a0e29b0dc9a32bb2a)
+        ;
+
+        
+    
+    
+            var marker_98614e15aac38bade6c3608b4433918e = L.marker(
+                [52.4064, 16.9292],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_b8c832f40252f0e2d379ffba46154913 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_98614e15aac38bade6c3608b4433918e.setIcon(icon_b8c832f40252f0e2d379ffba46154913);
+        
+    
+        var popup_7bd10fc63f4973a149b4fa7eeb331cf0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_366882f40775ea4068dbbaaa1a1c812f = $(`<div id="html_366882f40775ea4068dbbaaa1a1c812f" style="width: 100.0%; height: 100.0%;">Poznań (Pojazd 5)</div>`)[0];
+                popup_7bd10fc63f4973a149b4fa7eeb331cf0.setContent(html_366882f40775ea4068dbbaaa1a1c812f);
+            
+        
+
+        marker_98614e15aac38bade6c3608b4433918e.bindPopup(popup_7bd10fc63f4973a149b4fa7eeb331cf0)
+        ;
+
+        
+    
+    
+            var marker_ce5f8594e16e3307ebcafb0b65a61c4d = L.marker(
+                [54.5189, 18.5305],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_aad6803d057d253d355275a01e3d1964 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_ce5f8594e16e3307ebcafb0b65a61c4d.setIcon(icon_aad6803d057d253d355275a01e3d1964);
+        
+    
+        var popup_e31f0b58e06e0e4daffb0822940ebf6e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1667ac01d706590179aa28d1c4f49ead = $(`<div id="html_1667ac01d706590179aa28d1c4f49ead" style="width: 100.0%; height: 100.0%;">Gdynia (Pojazd 5)</div>`)[0];
+                popup_e31f0b58e06e0e4daffb0822940ebf6e.setContent(html_1667ac01d706590179aa28d1c4f49ead);
+            
+        
+
+        marker_ce5f8594e16e3307ebcafb0b65a61c4d.bindPopup(popup_e31f0b58e06e0e4daffb0822940ebf6e)
+        ;
+
+        
+    
+    
+            var marker_52d145196c41ae572e2dca1998bc9c9f = L.marker(
+                [53.4285, 14.5528],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_08f63cd06eb91324dbaa6af740e33c8c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_52d145196c41ae572e2dca1998bc9c9f.setIcon(icon_08f63cd06eb91324dbaa6af740e33c8c);
+        
+    
+        var popup_ac50c466dd7548c3e363570f5417059b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8756b8482aee92a3fc4c806cd4c4a681 = $(`<div id="html_8756b8482aee92a3fc4c806cd4c4a681" style="width: 100.0%; height: 100.0%;">Szczecin (Pojazd 5)</div>`)[0];
+                popup_ac50c466dd7548c3e363570f5417059b.setContent(html_8756b8482aee92a3fc4c806cd4c4a681);
+            
+        
+
+        marker_52d145196c41ae572e2dca1998bc9c9f.bindPopup(popup_ac50c466dd7548c3e363570f5417059b)
+        ;
+
+        
+    
+    
+            var marker_8114c485b79a0c4f9ba9869ae8fa4750 = L.marker(
+                [53.778, 20.4801],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_929781552cddeda7504b928fa03d16fa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_8114c485b79a0c4f9ba9869ae8fa4750.setIcon(icon_929781552cddeda7504b928fa03d16fa);
+        
+    
+        var popup_6cd56446fe9d34856ffc459a0d922e55 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_856025bbfea837164a21614589f9735c = $(`<div id="html_856025bbfea837164a21614589f9735c" style="width: 100.0%; height: 100.0%;">Olsztyn (Pojazd 5)</div>`)[0];
+                popup_6cd56446fe9d34856ffc459a0d922e55.setContent(html_856025bbfea837164a21614589f9735c);
+            
+        
+
+        marker_8114c485b79a0c4f9ba9869ae8fa4750.bindPopup(popup_6cd56446fe9d34856ffc459a0d922e55)
+        ;
+
+        
+    
+    
+            var marker_399c9043880e9991cd7d42b0de6a9764 = L.marker(
+                [50.6764, 21.7456],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_f9525bcfbfe3638567da012541d0b1be = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_399c9043880e9991cd7d42b0de6a9764.setIcon(icon_f9525bcfbfe3638567da012541d0b1be);
+        
+    
+        var popup_77e679b56abda9e81b35aa3050eca866 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_24a093f63ccb9b0ed502a974a922beac = $(`<div id="html_24a093f63ccb9b0ed502a974a922beac" style="width: 100.0%; height: 100.0%;">Sandomierz (Pojazd 5)</div>`)[0];
+                popup_77e679b56abda9e81b35aa3050eca866.setContent(html_24a093f63ccb9b0ed502a974a922beac);
+            
+        
+
+        marker_399c9043880e9991cd7d42b0de6a9764.bindPopup(popup_77e679b56abda9e81b35aa3050eca866)
+        ;
+
+        
+    
+    
+            var marker_af5653587a55d5c2557e8a329bf8e09e = L.marker(
+                [50.0412, 21.9991],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_479ab3cf690f8216859e6397c267a830 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_af5653587a55d5c2557e8a329bf8e09e.setIcon(icon_479ab3cf690f8216859e6397c267a830);
+        
+    
+        var popup_cc16acca865c10b307cf86493d47991e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_32479b743310fcbaab80a18ce42cd934 = $(`<div id="html_32479b743310fcbaab80a18ce42cd934" style="width: 100.0%; height: 100.0%;">Rzeszów (Pojazd 5)</div>`)[0];
+                popup_cc16acca865c10b307cf86493d47991e.setContent(html_32479b743310fcbaab80a18ce42cd934);
+            
+        
+
+        marker_af5653587a55d5c2557e8a329bf8e09e.bindPopup(popup_cc16acca865c10b307cf86493d47991e)
+        ;
+
+        
+    
+    
+            var marker_16b787da266652012f9861d85924007e = L.marker(
+                [50.8661, 20.6281],
+                {}
+            ).addTo(map_268ff0833dbd9e90439a627a8abdf3ec);
+        
+    
+            var icon_3777f4456c30055c8952d10ff8049ea1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_16b787da266652012f9861d85924007e.setIcon(icon_3777f4456c30055c8952d10ff8049ea1);
+        
+    
+        var popup_e8b342b95c0b8796cd7315e96c03808d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8951f25a17eecc0be7f5dd7cd5c626ac = $(`<div id="html_8951f25a17eecc0be7f5dd7cd5c626ac" style="width: 100.0%; height: 100.0%;">Kielce (Pojazd 5)</div>`)[0];
+                popup_e8b342b95c0b8796cd7315e96c03808d.setContent(html_8951f25a17eecc0be7f5dd7cd5c626ac);
+            
+        
+
+        marker_16b787da266652012f9861d85924007e.bindPopup(popup_e8b342b95c0b8796cd7315e96c03808d)
+        ;
+
+        
+    
+</script>
+</html>
