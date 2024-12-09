@@ -6,7 +6,7 @@ import webbrowser
 import os
 
 from cities_data import cities_data, city_demands
-from vehicle_routing_optimization import ImprovedVehicleRoutingProblem
+from vehicle_routing_optimization import VehicleRoutingProblem
 from vehicle_routing_visualization import visualize_routes
 
 
@@ -88,7 +88,7 @@ class VRPOptimizationApp:
             generations = int(self.generations_spin.get())
 
             # Utworzenie problemu VRP
-            vrp = ImprovedVehicleRoutingProblem(
+            vrp = VehicleRoutingProblem(
                 cities_data,
                 city_demands,
                 num_vehicles=num_vehicles,

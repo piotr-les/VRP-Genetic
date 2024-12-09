@@ -1,7 +1,7 @@
 import folium
 import random
 from cities_data import cities_data, city_demands
-from vehicle_routing_optimization import ImprovedVehicleRoutingProblem
+from vehicle_routing_optimization import VehicleRoutingProblem
 
 
 def visualize_routes(cities_data, routes):

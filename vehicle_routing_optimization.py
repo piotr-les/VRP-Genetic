@@ -4,7 +4,7 @@ import itertools
 from typing import List, Dict, Tuple
 
 
-class ImprovedVehicleRoutingProblem:
+class VehicleRoutingProblem:
     def __init__(
         self,
         cities_data: Dict[str, Tuple[float, float]],
