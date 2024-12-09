@@ -36,11 +36,12 @@ def visualize_routes(cities_data, routes):
             popup=f"Trasa pojazdu {i+1}",
         ).add_to(m)
 
-        # Dodanie markerów dla miast na trasie
-        for city in route:
+        # Dodanie markerów dla miast na trasie z numeracją kolejności
+        for j, city in enumerate(route, 1):
             folium.Marker(
                 cities_data[city],
-                popup=f"{city} (Pojazd {i+1})",
+                popup=f"{city} (Pojazd {i+1}, Kolejność: {j})",
+                tooltip=f"{city} - Kolejność: {j}",
                 icon=folium.Icon(color=colors[i], icon="info-sign"),
             ).add_to(m)
 
