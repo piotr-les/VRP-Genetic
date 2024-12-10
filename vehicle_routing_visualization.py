@@ -5,7 +5,7 @@ from vehicle_routing_optimization import VehicleRoutingProblem
 
 
 def visualize_routes(cities_data, routes):
-    """Wizualizacja tras na mapie Polski"""
+    """Wizualizacja tras na mapie Polski z legendą"""
     # Centrum mapy - Kraków
     m = folium.Map(location=[50.0647, 19.9450], zoom_start=6)
 
@@ -44,6 +44,41 @@ def visualize_routes(cities_data, routes):
                 tooltip=f"{city} - Kolejność: {j}",
                 icon=folium.Icon(color=colors[i], icon="info-sign"),
             ).add_to(m)
+
+    # Dodanie legendy
+    legend_html = """
+    <div style="
+        position: fixed; 
+        bottom: 50px; 
+        right: 50px; 
+        width: 180px; 
+        height: auto; 
+        border:2px solid grey; 
+        z-index:9999; 
+        font-size:14px;
+        background-color:white;
+        padding: 10px;
+        ">
+        <h4 style="margin-bottom: 10px;">Legenda tras pojazdów</h4>
+    """
+
+    for i, color in enumerate(colors[: len(routes)], 1):
+        legend_html += f"""
+        <div style="margin-bottom: 5px;">
+            <span style="
+                display: inline-block; 
+                width: 20px; 
+                height: 10px; 
+                background-color: {color}; 
+                margin-right: 10px;
+            "></span>
+            Pojazd {i}
+        </div>
+        """
+
+    legend_html += "</div>"
+
+    m.get_root().html.add_child(folium.Element(legend_html))
 
     # Zapis mapy
     m.save("vehicle_routing_map.html")
