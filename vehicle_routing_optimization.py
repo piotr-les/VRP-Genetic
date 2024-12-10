@@ -129,14 +129,18 @@ class VehicleRoutingProblem:
 
             for _ in range(population_size):
                 # Selekcja turniejowa
-                parent1 = max(random.sample(population, 3), key=fitness)
-                parent2 = max(random.sample(population, 3), key=fitness)
+                parent1 = max(
+                    random.sample(population, min(3, len(population))), key=fitness
+                )
+                parent2 = max(
+                    random.sample(population, min(3, len(population))), key=fitness
+                )
 
                 # Krzyżowanie - wymiana miast między trasami
                 child = [route.copy() for route in parent1]
 
                 # Losowa mutacja - przesunięcie miasta między trasami
-                if random.random() < mutation_rate:
+                if random.random() < mutation_rate and self.num_vehicles > 1:
                     vehicle1, vehicle2 = random.sample(range(self.num_vehicles), 2)
                     if child[vehicle1] and child[vehicle2]:
                         city = child[vehicle1].pop(
