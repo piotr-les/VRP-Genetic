@@ -19,6 +19,13 @@ class VehicleRoutingProblem:
         self.cities = list(cities_data.keys())
         self.total_demand = sum(city_demands.values())
 
+        # Sprawdzenie poprawności parametrów
+        if self.num_vehicles * self.vehicle_capacity < self.total_demand:
+            raise ValueError(
+                f"Łączna pojemność pojazdów ({self.num_vehicles * self.vehicle_capacity}) "
+                f"jest mniejsza niż całkowite zapotrzebowanie miast ({self.total_demand})."
+            )
+
         # Obliczenie macierzy odległości
         self.distance_matrix = self._calculate_distance_matrix()
 
