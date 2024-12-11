@@ -103,7 +103,7 @@ class VehicleRoutingProblem:
         generations: int = 300,
         mutation_rate: float = 0.1,
     ) -> List[List[str]]:
-        """Zaawansowany algorytm genetyczny dla VRP"""
+        """Algorytm genetyczny dla VRP"""
         cities_to_serve = [city for city in self.cities if city != "Kraków"]
 
         def create_individual():

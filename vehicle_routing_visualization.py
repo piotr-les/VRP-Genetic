@@ -1,4 +1,5 @@
 import folium
+from folium import plugins
 from cities_data import cities_data, city_demands
 from vehicle_routing_optimization import VehicleRoutingProblem
 
@@ -81,13 +82,13 @@ def visualize_routes(cities_data, routes):
         </div>
         """
 
-        # Rysowanie linii trasy
-        folium.PolyLine(
+        plugins.AntPath(
             route_coords,
             color=colors[i],
-            weight=2,
+            weight=4,
             opacity=0.8,
-            popup=f"Trasa pojazdu {i+1}",
+            dash_array=[10, 20],
+            delay=1500,
         ).add_to(m)
 
         # Dodanie markerów dla miast na trasie z numeracją kolejności
