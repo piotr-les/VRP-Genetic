@@ -14,7 +14,7 @@ class VRPOptimizationApp:
     def __init__(self, master):
         self.master = master
         master.title("Optymalizator Tras Pojazdów")
-        master.geometry("500x600")  # Zwiększony rozmiar okna
+        master.geometry("1000x800")
 
         # Ramka dla parametrów
         params_frame = tk.LabelFrame(master, text="Parametry Optymalizacji")
@@ -24,7 +24,7 @@ class VRPOptimizationApp:
         tk.Label(params_frame, text="Liczba pojazdów:").grid(
             row=0, column=0, sticky="w", padx=5, pady=5
         )
-        self.vehicles_spin = tk.Spinbox(params_frame, from_=1, to=10, width=10)
+        self.vehicles_spin = tk.Spinbox(params_frame, from_=1, to=5, width=10)
         self.vehicles_spin.delete(0, tk.END)
         self.vehicles_spin.insert(0, "5")
         self.vehicles_spin.grid(row=0, column=1, padx=5, pady=5)
@@ -44,7 +44,7 @@ class VRPOptimizationApp:
         )
         self.generations_spin = tk.Spinbox(params_frame, from_=50, to=1000, width=10)
         self.generations_spin.delete(0, tk.END)
-        self.generations_spin.insert(0, "75")
+        self.generations_spin.insert(0, "50")
         self.generations_spin.grid(row=2, column=1, padx=5, pady=5)
 
         # Przyciski
