@@ -107,31 +107,105 @@ class VehicleRoutingProblem:
         cities_to_serve = [city for city in self.cities if city != "Kraków"]
 
         def create_individual():
-            """Losowe utworzenie rozwiązania"""
-            # Losowy podział miast między pojazdy
+            """Losowe utworzenie rozwiązania z zachowaniem ładowności"""
             individual = [[] for _ in range(self.num_vehicles)]
             random.shuffle(cities_to_serve)
 
-            for i, city in enumerate(cities_to_serve):
-                vehicle_index = i % self.num_vehicles
-                individual[vehicle_index].append(city)
+            for city in cities_to_serve:
+                # Znajdź pojazd z najmniejszym aktualnym zapotrzebowaniem,
+                # który może przyjąć miasto
+                valid_vehicles = [
+                    i
+                    for i in range(self.num_vehicles)
+                    if sum(self.city_demands[c] for c in individual[i])
+                    + self.city_demands[city]
+                    <= self.vehicle_capacity
+                ]
+
+                if valid_vehicles:
+                    # Wybierz pojazd z najmniejszym aktualnym zapotrzebowaniem
+                    vehicle_index = min(
+                        valid_vehicles,
+                        key=lambda i: sum(self.city_demands[c] for c in individual[i]),
+                    )
+                    individual[vehicle_index].append(city)
+                else:
+                    # Jeśli żaden pojazd nie może przyjąć miasta,
+                    # znajdź pojazd z najmniejszym aktualnym zapotrzebowaniem
+                    vehicle_index = min(
+                        range(self.num_vehicles),
+                        key=lambda i: sum(self.city_demands[c] for c in individual[i]),
+                    )
+                    individual[vehicle_index].append(city)
 
             return individual
 
         def fitness(solution):
             """Ocena rozwiązania"""
-            # Jeśli rozwiązanie niepoprawne, zwróć bardzo niską wartość
             if not self._validate_solution(solution):
                 return float("-inf")
 
-            # Im mniejsza całkowita odległość, tym lepiej (stąd negacja)
             return -self._calculate_total_distance(solution)
+
+        def crossover(parent1, parent2):
+            """Krzyżowanie dwóch rodziców z zachowaniem ładowności"""
+            child = [[] for _ in range(self.num_vehicles)]
+
+            # Lista miast do przypisania
+            unassigned_cities = list(cities_to_serve)
+
+            # Próba skopiowania części tras z rodziców
+            for i in range(self.num_vehicles):
+                # Losowy wybór trasy z jednego z rodziców
+                parent_route = parent1[i] if random.random() < 0.5 else parent2[i]
+
+                # Sprawdzenie, które miasta można dodać do trasy
+                for city in parent_route:
+                    if city in unassigned_cities:
+                        # Sprawdzenie ładowności
+                        current_demand = sum(self.city_demands[c] for c in child[i])
+                        if (
+                            current_demand + self.city_demands[city]
+                            <= self.vehicle_capacity
+                        ):
+                            child[i].append(city)
+                            unassigned_cities.remove(city)
+
+            # Przypisanie pozostałych miast
+            while unassigned_cities:
+                city = unassigned_cities.pop(0)
+
+                # Znajdź trasę z najmniejszym obciążeniem, która może przyjąć miasto
+                valid_vehicles = [
+                    i
+                    for i in range(self.num_vehicles)
+                    if sum(self.city_demands[c] for c in child[i])
+                    + self.city_demands[city]
+                    <= self.vehicle_capacity
+                ]
+
+                if valid_vehicles:
+                    # Wybierz pojazd z najmniejszym aktualnym zapotrzebowaniem
+                    vehicle_index = min(
+                        valid_vehicles,
+                        key=lambda i: sum(self.city_demands[c] for c in child[i]),
+                    )
+                else:
+                    # Jeśli żaden pojazd nie może przyjąć miasta,
+                    # znajdź pojazd z najmniejszym aktualnym zapotrzebowaniem
+                    vehicle_index = min(
+                        range(self.num_vehicles),
+                        key=lambda i: sum(self.city_demands[c] for c in child[i]),
+                    )
+
+                child[vehicle_index].append(city)
+
+            return child
 
         # Inicjalizacja populacji
         population = [create_individual() for _ in range(population_size)]
 
         for generation in range(generations):
-            # Selekcja, krzyżowanie, mutacja
             new_population = []
 
             for _ in range(population_size):
@@ -143,17 +217,29 @@ class VehicleRoutingProblem:
                     random.sample(population, min(3, len(population))), key=fitness
                 )
 
-                # Krzyżowanie - wymiana miast między trasami
-                child = [route.copy() for route in parent1]
+                # Krzyżowanie rodziców
+                child = crossover(parent1, parent2)
 
-                # Losowa mutacja - przesunięcie miasta między trasami
+                # Mutacja z zachowaniem ładowności
                 if random.random() < mutation_rate and self.num_vehicles > 1:
                     vehicle1, vehicle2 = random.sample(range(self.num_vehicles), 2)
                     if child[vehicle1] and child[vehicle2]:
-                        city = child[vehicle1].pop(
-                            random.randint(0, len(child[vehicle1]) - 1)
-                        )
-                        child[vehicle2].append(city)
+                        # Znajdź miasto, które można przenieść
+                        for _ in range(len(child[vehicle1])):
+                            city_index = random.randint(0, len(child[vehicle1]) - 1)
+                            city = child[vehicle1][city_index]
+
+                            # Sprawdź, czy można przenieść miasto
+                            current_demand_vehicle2 = sum(
+                                self.city_demands[c] for c in child[vehicle2]
+                            )
+                            if (
+                                current_demand_vehicle2 + self.city_demands[city]
+                                <= self.vehicle_capacity
+                            ):
+                                child[vehicle1].pop(city_index)
+                                child[vehicle2].append(city)
+                                break
 
                 new_population.append(child)
 
