@@ -47,6 +47,26 @@ class VRPOptimizationApp:
         self.generations_spin.insert(0, "50")
         self.generations_spin.grid(row=2, column=1, padx=5, pady=5)
 
+        # Rozmiar populacji
+        tk.Label(params_frame, text="Rozmiar populacji:").grid(
+            row=3, column=0, sticky="w", padx=5, pady=5
+        )
+        self.population_spin = tk.Spinbox(params_frame, from_=50, to=500, width=10)
+        self.population_spin.delete(0, tk.END)
+        self.population_spin.insert(0, "200")
+        self.population_spin.grid(row=3, column=1, padx=5, pady=5)
+
+        # Współczynnik mutacji
+        tk.Label(params_frame, text="Współczynnik mutacji:").grid(
+            row=4, column=0, sticky="w", padx=5, pady=5
+        )
+        self.mutation_spin = tk.Spinbox(
+            params_frame, from_=0.0, to=1.0, increment=0.1, format="%.1f", width=10
+        )
+        self.mutation_spin.delete(0, tk.END)
+        self.mutation_spin.insert(0, "0.1")
+        self.mutation_spin.grid(row=4, column=1, padx=5, pady=5)
+
         # Przyciski
         buttons_frame = tk.Frame(master)
         buttons_frame.pack(padx=10, pady=10, fill="x")
@@ -86,6 +106,8 @@ class VRPOptimizationApp:
             num_vehicles = int(self.vehicles_spin.get())
             vehicle_capacity = int(self.capacity_spin.get())
             generations = int(self.generations_spin.get())
+            population_size = int(self.population_spin.get())
+            mutation_rate = float(self.mutation_spin.get())
 
             # Utworzenie problemu VRP
             vrp = VehicleRoutingProblem(
@@ -97,7 +119,9 @@ class VRPOptimizationApp:
 
             # Uruchomienie algorytmu genetycznego
             self.best_routes = vrp.genetic_algorithm(
-                population_size=100, generations=generations
+                population_size=population_size,
+                generations=generations,
+                mutation_rate=mutation_rate,
             )
 
             # Przygotowanie wyników
