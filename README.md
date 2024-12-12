@@ -22,8 +22,8 @@ This application solves the Vehicle Routing Problem (VRP) using a genetic algori
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/vehicle-routing-problem.git
-cd vehicle-routing-problem
+git clone https://github.com/piotr-les/VRP-Genetic.git
+cd VRP-Genetic-main
 ```
 
 ### 2. Create Virtual Environment (Recommended)
@@ -96,3 +96,19 @@ python vehicle_routing_gui.py
 - Color-coded routes
 - Detailed route information sidebar
 - Distance and demand calculations
+
+## Images
+
+### 1. Application Interface
+
+![Application Main Screen](/images/gui.jpg)
+_Main optimization interface with parameter controls_
+
+### 4. Interactive Route Map
+
+![Route Visualization Map](/images/route_map.jpg)
+_Interactive map showing optimized routes with detailed sidebar_
+
+## Author
+
+[Piotr Leś](https://github.com/piotr-les)
